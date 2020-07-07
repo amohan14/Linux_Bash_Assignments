@@ -1,0 +1,8 @@
+vagrant@vagrant-ubuntu-trusty-64:~$ vi vieditor
+vagrant@vagrant-ubuntu-trusty-64:~$ cat vieditor 
+used when meeting or greeting someone:
+Hello, Paul. I haven't seen you for ages.
+And a big hello (= welcome) to all the parents who've come to see the show.
+used when meeting or greeting someone:
+lo, Paul. I haven't seen you for ages.
+vagrant@vagrant-ubuntu-trusty-64:~$ 

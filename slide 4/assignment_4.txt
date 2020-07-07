@@ -1,0 +1,63 @@
+Create file which will display below info on execution 
+Your name
+Date time
+Hostname
+Prints user id o Prints uptime
+
+vagrant@vagrant-ubuntu-trusty-64:~$ cat > test1.sh
+#!/bin/bash/  
+echo "Ananya"
+date
+hostname
+id -u
+uptime
+vagrant@vagrant-ubuntu-trusty-64:~$ bash test1.sh 
+Ananya
+Mon Jun 29 23:18:28 UTC 2020
+vagrant-ubuntu-trusty-64
+1000
+ 23:18:28 up  6:52,  2 users,  load average: 0.00, 0.01, 0.05
+vagrant@vagrant-ubuntu-trusty-64:~$ 
+
+===============
+Write a simple script which will execute below commands in order 
+uptime
+Id
+whoami
+pwd
+uname –a  
+Copy a file
+
+vagrant@vagrant-ubuntu-trusty-64:~$ touch test2.sh
+vagrant@vagrant-ubuntu-trusty-64:~$ cat > test3.sh
+#!/bin/bash/
+uptime
+id
+whoami
+pwd
+uname -a 
+cp test1.sh test2.sh
+vagrant@vagrant-ubuntu-trusty-64:~$ bash test3.sh
+ 23:24:37 up  6:58,  2 users,  load average: 0.00, 0.01, 0.05
+uid=1000(vagrant) gid=1000(vagrant) groups=1000(vagrant)
+vagrant
+/home/vagrant
+Linux vagrant-ubuntu-trusty-64 3.13.0-170-generic #220-Ubuntu SMP Thu May 9 12:40:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+vagrant@vagrant-ubuntu-trusty-64:~$ cat test2.sh
+#!/bin/bash/  
+echo "Ananya"
+date
+hostname
+id -u
+uptime
+vagrant@vagrant-ubuntu-trusty-64:~$
+===============
+
+Using tail and head print top 2 lines of last 10 lines of /etc/group
+
+vagrant@vagrant-ubuntu-trusty-64:~$ tail -n 10 /etc/group | head -n 2
+mlocate:x:107:
+ssh:x:108:
+vagrant@vagrant-ubuntu-trusty-64:~$ 
+
+

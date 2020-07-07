@@ -1,0 +1,22 @@
+Create a Bash script using awk and standard UNIX commands that will show the top three directories in the / ( du -hs /*)
+
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo du -hs /* | sort -rh | head -3 | awk '{print $2}'
+du: cannot access ‘/proc/17010/task/17010/fd/4’: No such file or directory
+du: cannot access ‘/proc/17010/task/17010/fdinfo/4’: No such file or directory
+du: cannot access ‘/proc/17010/fd/4’: No such file or directory
+du: cannot access ‘/proc/17010/fdinfo/4’: No such file or directory
+/usr
+/var
+/lib
+
+#Supressing the "cannot access" error in output(Redirect stderr to stdout and grep to exclude "cannot access")
+
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo du -hs /* 2>&1 | grep -v 'access' | sort -rh | head -3 | awk '{print $2}'
+/usr
+/var
+/lib
+vagrant@vagrant-ubuntu-trusty-64:~$ 
+
+
+• Display all process in linux sort them by memory usage
+vagrant@vagrant-ubuntu-trusty-64:~$ top -o %MEM

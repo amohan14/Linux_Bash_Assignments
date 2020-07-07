@@ -1,0 +1,2 @@
+   27  tar -cvf archive_var_log.tar /var/log
+   28  history > tar_assignment

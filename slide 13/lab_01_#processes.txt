@@ -1,0 +1,4 @@
+Count number of process running in your Linux box ( hint: ps, wc)
+
+vagrant@vagrant-ubuntu-trusty-64:/$ ps aux | wc -l
+85

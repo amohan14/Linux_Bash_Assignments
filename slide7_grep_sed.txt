@@ -1,0 +1,39 @@
+• Count number of “erors” messages in sample.txt
+
+vagrant@vagrant-ubuntu-trusty-64:~$ vi sample.txt
+vagrant@vagrant-ubuntu-trusty-64:~$ cat sample.txt 
+This is the first line of an example text.
+It is a text with erors.
+It is a text with erors.
+Lots of erors.
+So much erors, all these erors are making me sick.
+This is a line not containing any errors.
+This is a line not containing any errors.
+This is the last line.
+vagrant@vagrant-ubuntu-trusty-64:~$ grep -o -i erors sample.txt | wc -l
+5
+
+• Correct all mistakes on the file
+vagrant@vagrant-ubuntu-trusty-64:~$ sed 's/erors/errors/g' sample.txt
+This is the first line of an example text.
+It is a text with errors.
+It is a text with errors.
+Lots of errors.
+So much errors, all these errors are making me sick.
+This is a line not containing any errors.
+This is a line not containing any errors.
+This is the last line.
+
+• Delete all spaces from the sample.txt file.
+
+vagrant@vagrant-ubuntu-trusty-64:~$ sed 's/[[:space:]]//g' sample.txt > no-spaces.txt
+vagrant@vagrant-ubuntu-trusty-64:~$ cat no-spaces.txt 
+Thisisthefirstlineofanexampletext.
+Itisatextwitherors.
+Itisatextwitherors.
+Lotsoferors.
+Somucherors,alltheseerorsaremakingmesick.
+Thisisalinenotcontaininganyerrors.
+Thisisalinenotcontaininganyerrors.
+Thisisthelastline.
+vagrant@vagrant-ubuntu-trusty-64:~$ 

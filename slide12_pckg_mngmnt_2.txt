@@ -1,0 +1,24 @@
+Install following utilities if not already installed, and explore man page of each.
+• Traceroute 
+• dig
+• nslookup
+• nc
+• telnet 
+• netstat 
+• w
+• nmap
+
+   21  sudo apt-get install traceroute
+   22  man traceroute
+   23  sudo apt install dnsutils
+   24  man dig
+   24  man nslookup
+   25  sudo apt-get install -y netcat
+   26  man nc
+   27  sudo apt-get install telnetd -y
+   28  man telnet
+   29  sudo apt install net-tools
+   30  man netstat
+   31  sudo apt-get install nmap
+   32  man nmap
+   33  history > pckg_mngmnt_2.txt

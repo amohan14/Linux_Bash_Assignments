@@ -1,0 +1,16 @@
+   
+• Install git, httpd, php and mysql in your instance
+• Check the version of each application installed and put them in a file
+
+   84  sudo apt install git
+   85  git --version
+   86  sudo apt-get install apache2
+   87  apache2 -v
+   89  sudo apt-get install mysql-server
+   91  sudo mysql -v
+  100  sudo mysql_secure_installation
+  102  sudo mysql -u root -p
+  110  sudo apt-get install php
+  112  sudo apt-get install php5-cli
+  113  php -v
+  114  history > test_pkg.txt

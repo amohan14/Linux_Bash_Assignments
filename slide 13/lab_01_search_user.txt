@@ -1,0 +1,29 @@
+Make a script that checks whether a user exists in /etc/passwd. If the user exists, print the username present, or no user found.
+
+vagrant@vagrant-ubuntu-trusty-64:~$ cat userfound.sh 
+#!/bin/bash/
+
+#Take the input from user
+echo "Enter user: "
+read user
+
+#Grep for the username in /etc/passwd
+sudo grep $user /etc/passwd
+
+#if for output
+if [ $? -eq 0 ]
+then
+        echo "User exists"
+else
+        echo "No User found"
+fi
+vagrant@vagrant-ubuntu-trusty-64:~$ bash userfound.sh 
+Enter user: 
+vagrant
+vagrant:x:1000:1000::/home/vagrant:/bin/bash
+User exists
+vagrant@vagrant-ubuntu-trusty-64:~$ bash userfound.sh 
+Enter user: 
+Ananya
+No User found
+vagrant@vagrant-ubuntu-trusty-64:~$ 

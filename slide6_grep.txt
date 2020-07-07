@@ -1,0 +1,29 @@
+Display configuration files in /etc that contain numbers in their names.
+vagrant@vagrant-ubuntu-trusty-64:~$ ls /etc/ | grep -P '\d'
+at-spi2
+dbus-1
+ec2_version
+gtk-3.0
+iproute2
+mke2fs.conf
+polkit-1
+python2.7
+python3
+python3.4
+rc0.d
+rc1.d
+rc2.d
+rc3.d
+rc4.d
+rc5.d
+rc6.d
+w3m
+X11
+vagrant@vagrant-ubuntu-trusty-64:~$ 
+=======================================
+Make a list of files in your home directory that were changed less than 1 week ago, using grep/find, but leave out directories
+vagrant@vagrant-ubuntu-trusty-64:~$ find . -mtime +7
+./.bash_logout
+./.bashrc
+./.profile
+vagrant@vagrant-ubuntu-trusty-64:~$ 

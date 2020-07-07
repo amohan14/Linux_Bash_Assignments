@@ -1,0 +1,22 @@
+File Permission Assignment
+• Create a file, which has read permission for user and group only
+• Create a file, which has write permission for user only.
+• Create a directory where everyone can enter but only
+user can write.
+• Create an executable file by user only
+
+   11  touch test1.txt
+   12  ls -al
+   13  chmod 440 test1.txt
+   14  ls -al
+   15  chmod 640 test1.txt
+   16  ls -al
+   17  mkdir a
+   18  ls -al
+   19  pwd
+   20  chmod -R 644 /home/vagrant/a
+   21  ls -al
+   22  touch test2.txt
+   23  chmod 744 test2.txt 
+   24  ls -al
+   25  history > assignment_2.txt

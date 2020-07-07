@@ -1,0 +1,29 @@
+Navigating through Linux (print the command)
+  • Listing files /var/lib
+• Changing directory to your home directory
+• Checking content of files ( /var/log/message )
+• Create a file ( /home/yourname
+• Renaming files ( rename yourname to myname )
+• Deleting files ( delete the created file )
+• Count number of files in /etc
+• Remember: Everything is file ( Repeat with directory )
+   17  ls -a /var/lib/
+   18  cd
+   19  cd /var/log/
+   20  ls -al
+   22  cat dmesg
+   23  cd
+   24  sudo touch /home/ananya
+   25  ls -al /home
+   30  sudo mv /home/ananya /home/sonu
+   32  ls -al /home
+   33  sudo rm /home/sonu
+   34  ls -al /home
+   35  ls /etc | wc -l
+   36  sudo mkdir /home/ananya
+   38  ls -al /home
+   39  sudo mv /home/ananya /home/sonu
+   40  ls -al /home
+   41  sudo rmdir /home/sonu
+   42  ls -al /home
+   43  history > assignment_1.txt

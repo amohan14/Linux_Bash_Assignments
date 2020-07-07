@@ -1,0 +1,3 @@
+Write a cron task which will delete unused file more than 10 days from /tmp folder
+
+find /tmp -type f -mtime +10 -exec rm {} +

@@ -1,0 +1,39 @@
+Generate a System report about your system, it should include
+• Hostname
+• Ipaddress
+• Free memory usage
+• Number of CPU cores
+• The output of the script should be like “report_<date>.log”
+
+#Used script command to create the report.
+
+vagrant@vagrant-ubuntu-trusty-64:/$ sudo script report_`date +"%d-%m-%Y"`.log
+Script started, file is report_02-07-2020.log
+root@vagrant-ubuntu-trusty-64:/# hostname
+vagrant-ubuntu-trusty-64
+root@vagrant-ubuntu-trusty-64:/# hostname -I
+10.0.2.15 
+root@vagrant-ubuntu-trusty-64:/# free -m
+             total       used       free     shared    buffers     cached
+Mem:           489        445         44          0         58        106
+-/+ buffers/cache:        280        209
+Swap:            0          0          0
+root@vagrant-ubuntu-trusty-64:/# grep 'cpu cores' /proc/cpuinfo | uniq
+cpu cores       : 1
+root@vagrant-ubuntu-trusty-64:/# exitScript done, file is report_02-07-2020.log
+vagrant@vagrant-ubuntu-trusty-64:/$ cat report_02-07-2020.log
+Script started on Thu 02 Jul 2020 11:27:16 PM UTC
+root@vagrant-ubuntu-trusty-64:/# hostname
+vagrant-ubuntu-trusty-64
+root@vagrant-ubuntu-trusty-64:/# hostname -I
+10.0.2.15 
+root@vagrant-ubuntu-trusty-64:/# free -m
+             total       used       free     shared    buffers     cached
+Mem:           489        445         44          0         58        106
+-/+ buffers/cache:        280        209
+Swap:            0          0          0
+root@vagrant-ubuntu-trusty-64:/# grep 'cpu cores' /proc/cpuinfo | uniq
+cpu cores       : 1
+root@vagrant-ubuntu-trusty-64:/# exit
+Script done on Thu 02 Jul 2020 11:28:18 PM UTC
+vagrant@vagrant-ubuntu-trusty-64:/$ 
